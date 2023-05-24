@@ -4,6 +4,9 @@
 # .tfplan files
 *.tfplan.*
 
+# tf secret variables
+*.tfvars.*
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
