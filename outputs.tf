@@ -9,3 +9,7 @@ output "primary_blob_endpoint" {
 output "blob_url" {
   value = azurerm_storage_blob.blob.url
 }
+
+# output "sqp_server_id" {
+#   value = azurerm_sql_server.wesqlbd.id
+# }

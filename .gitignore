@@ -1,10 +1,12 @@
 # Local .terraform directories
 **/.terraform/*
 
+
 # .tfplan files
 *.tfplan.*
 
 # tf secret variables
+*.tfvars
 *.tfvars.*
 
 # .tfstate files

@@ -1,2 +1,6 @@
-storage_account_name   = "storageacc030"
-storage_container_name = "my-files"
+storage_account_name             = "storageacc030"
+storage_container_name           = "my-files"
+sql_administrator_login          = "sqladmin"
+sql_administrator_login_password = "admin01#"
+sql_server_name                  = "terraform-sql-server"
+sql_database_name                = "terraform-sql-db"

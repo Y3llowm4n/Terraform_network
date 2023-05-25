@@ -28,3 +28,24 @@ variable "storage_container_name" {
   type        = string
   description = "Storage Container Name in Azure"
 }
+
+variable "sql_administrator_login" {
+  type        = string
+  description = "Administrator login for sql-server"
+}
+
+variable "sql_administrator_login_password" {
+  type        = string
+  description = "Administrator password for sql-server"
+}
+
+variable "sql_server_name" {
+  type        = string
+  description = "Name for sql server"
+}
+
+variable "sql_database_name" {
+  type        = string
+  description = "Name for  sql database"
+}
+
