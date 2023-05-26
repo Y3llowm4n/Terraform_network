@@ -1,19 +1,7 @@
 #!/bin/bash
 
-# install firewalld 
-sudo yum install firewalld wget -y
+# install Nagiox
+curl https://assets.nagios.com/downloads/nagiosxi/install.sh | sh
 
-# change directory to temp
-cd /tmp
-
-# get nagios
-sudo wget http://assets.nagios.com/downloads/nagiosxi/xi-latest.tar.gz
-
-# expand installation directory
-tar zxf xi-latest.tar.gz
-
-# change directory to newly installed
-cd /tmp/nagiosxi
-
-# fully install nagios
-./fullinstall -y
+# Open http port
+sudo ufw allow 80
