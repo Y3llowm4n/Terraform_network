@@ -5,6 +5,10 @@ resource "azurerm_storage_account" "storage" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
   allow_blob_public_access = true
+
+  tags = {
+    evironment = "production"
+  }
 }
 
 resource "azurerm_storage_container" "container" {

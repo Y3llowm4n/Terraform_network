@@ -49,3 +49,33 @@ variable "sql_database_name" {
   description = "Name for  sql database"
 }
 
+variable "computer_user_1" {
+  type        = string
+  description = "Name for VM1"
+}
+
+variable "computer_user_2" {
+  type        = string
+  description = "Name for VM2"
+}
+
+variable "admin_username_1" {
+  type        = string
+  description = "Admin name for VM2"
+}
+
+variable "admin_username_2" {
+  type        = string
+  description = "Admin name for VM2"
+}
+
+variable "linux_vm_1" {
+  type        = string
+  description = "Name for linux vm 1"
+}
+
+variable "linux_vm_2" {
+  type        = string
+  description = "Name for linux vm 2"
+}
+
