@@ -18,3 +18,4 @@ output "tls_private_key" {
   value     = tls_private_key.web_ssh.private_key_pem
   sensitive = true
 }
+

@@ -73,9 +73,3 @@ variable "linux_vm_1" {
   type        = string
   description = "Name for linux vm 1"
 }
-
-variable "linux_vm_2" {
-  type        = string
-  description = "Name for linux vm 2"
-}
-
