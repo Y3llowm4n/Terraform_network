@@ -1,5 +1,5 @@
-resource "azurerm_network_security_group" "terraform-nsg" {
-  name                = "terraform-nsg"
+resource "azurerm_network_security_group" "nsg_py_prod_001" {
+  name                = "nsg_py_prod_001"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -27,7 +27,7 @@ resource "azurerm_network_security_group" "terraform-nsg" {
     destination_address_prefix = "*"
   }
 
-    security_rule {
+  security_rule {
     name                       = "http-rule-out"
     priority                   = 100
     direction                  = "Outbound"
@@ -39,7 +39,7 @@ resource "azurerm_network_security_group" "terraform-nsg" {
     destination_address_prefix = "*"
   }
 
-    security_rule {
+  security_rule {
     name                       = "sql-server-rule-out"
     priority                   = 101
     direction                  = "Outbound"
@@ -51,7 +51,7 @@ resource "azurerm_network_security_group" "terraform-nsg" {
     destination_address_prefix = "*"
   }
 
-      security_rule {
+  security_rule {
     name                       = "http-rule-in"
     priority                   = 100
     direction                  = "Inbound"
@@ -63,7 +63,7 @@ resource "azurerm_network_security_group" "terraform-nsg" {
     destination_address_prefix = "*"
   }
 
-    security_rule {
+  security_rule {
     name                       = "sql-server-rule-in"
     priority                   = 101
     direction                  = "Inbound"

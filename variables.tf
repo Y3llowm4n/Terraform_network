@@ -49,7 +49,7 @@ variable "sql_database_name" {
   description = "Name for  sql database"
 }
 
-variable "computer_user" {
+variable "computer_name" {
   type        = string
   description = "Name for VM1"
 }
@@ -67,4 +67,13 @@ variable "linux_vm" {
 variable "admin_password" {
   type        = string
   description = "Password for linux vm"
+}
+
+variable "home_ip" {
+  type        = string
+  description = "home ip adress"
+}
+variable "school_ip" {
+  type        = string
+  description = "school ip adress"
 }

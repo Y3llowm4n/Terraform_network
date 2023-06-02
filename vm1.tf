@@ -1,11 +1,11 @@
-resource "azurerm_linux_virtual_machine" "lin_vm_1" {
-  name                  = "web_vm"
+resource "azurerm_linux_virtual_machine" "vm_py_001" {
+  name                  = var.computer_name
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
-  computer_name  = var.computer_user
-  admin_username = var.admin_username
-  admin_password = var.admin_password
-  network_interface_ids = [azurerm_network_interface.terraform_nic.id]
+  computer_name         = var.computer_name
+  admin_username        = var.admin_username
+  admin_password        = var.admin_password
+  network_interface_ids = [azurerm_network_interface.nic_py_001.id]
   size                  = "Standard_B1s"
 
   admin_ssh_key {
@@ -27,12 +27,12 @@ resource "azurerm_linux_virtual_machine" "lin_vm_1" {
   }
 
   boot_diagnostics {
-    storage_account_uri = azurerm_storage_account.storage.primary_blob_endpoint
+    storage_account_uri = azurerm_storage_account.st_pop_001.primary_blob_endpoint
   }
 
-  depends_on = [ 
+  depends_on = [
     tls_private_key.linux_key
-   ]
+  ]
   tags = {
     evironment = "production"
   }
