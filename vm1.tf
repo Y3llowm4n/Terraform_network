@@ -37,5 +37,19 @@ resource "azurerm_linux_virtual_machine" "vm_py_001" {
   }
 }
 
+resource "azurerm_virtual_machine_extension" "vm_ext_bash" {
+  name                 = "vme-bash"
+  virtual_machine_id   = azurerm_linux_virtual_machine.vm_py_001.id
+  publisher            = "Microsoft.Azure.Extensions"
+  type                 = "CustomScript"
+  type_handler_version = "2.0"
+
+  settings = <<SETTINGS
+  {
+    "fileUris": ["https://stpy001.blob.core.windows.net/cr-py-prod-001/website2.sh"], 
+    "commandToExecute": "bash website2.sh" 
+  }
+    SETTINGS
+}
 
 
