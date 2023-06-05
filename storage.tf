@@ -18,9 +18,10 @@ resource "azurerm_storage_container" "ct_py_001" {
 }
 
 resource "azurerm_storage_blob" "bb_py_001" {
-  name                   = "install_web.sh"
+  name                   = "vm-install-0001"
   storage_account_name   = azurerm_storage_account.st_pop_001.name
   storage_container_name = azurerm_storage_container.ct_py_001.name
   type                   = "Block"
   source                 = "install_web.sh"
 }
+

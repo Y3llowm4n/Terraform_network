@@ -1,6 +1,5 @@
 provider "azurerm" {
   features {
-
   }
 }
 
@@ -9,6 +8,7 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "2.78.0"
+
     }
     random = {
       source  = "hashicorp/random"

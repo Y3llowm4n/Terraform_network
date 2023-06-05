@@ -6,10 +6,9 @@ resource "azurerm_network_interface" "nic_py_001" {
 
   ip_configuration {
     name                          = "nic_py_config"
-    subnet_id                     = azurerm_subnet.snet_pop_westeu_001.id
-    private_ip_address_allocation = "Static"
+    subnet_id                     = azurerm_subnet.snet_lan_westeu_001.id
+    private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.pip_pyvm_prod_westeu_001.id
-    public_ip_adress_allocation   = "Static"
   }
 
   tags = {

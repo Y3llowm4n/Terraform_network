@@ -68,12 +68,3 @@ variable "admin_password" {
   type        = string
   description = "Password for linux vm"
 }
-
-variable "home_ip" {
-  type        = string
-  description = "home ip adress"
-}
-variable "school_ip" {
-  type        = string
-  description = "school ip adress"
-}

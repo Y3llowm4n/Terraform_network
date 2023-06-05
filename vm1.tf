@@ -25,7 +25,6 @@ resource "azurerm_linux_virtual_machine" "vm_py_001" {
     sku       = "22_04-lts-gen2"
     version   = "latest"
   }
-
   boot_diagnostics {
     storage_account_uri = azurerm_storage_account.st_pop_001.primary_blob_endpoint
   }
@@ -37,3 +36,6 @@ resource "azurerm_linux_virtual_machine" "vm_py_001" {
     evironment = "production"
   }
 }
+
+
+
