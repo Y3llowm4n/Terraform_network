@@ -68,3 +68,23 @@ variable "admin_password" {
   type        = string
   description = "Password for linux vm"
 }
+
+variable "computer_name2" {
+  type        = string
+  description = "Name for VM1"
+}
+
+variable "admin_username2" {
+  type        = string
+  description = "Admin name for VM2"
+}
+
+variable "linux_vm2" {
+  type        = string
+  description = "Name for linux vm"
+}
+
+variable "admin_password2" {
+  type        = string
+  description = "Password for linux vm"
+}
