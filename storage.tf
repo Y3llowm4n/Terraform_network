@@ -36,10 +36,10 @@ resource "azurerm_storage_blob" "bb_py_001" {
 }
 
 resource "azurerm_storage_blob" "bb_mon_001" {
-  name                   = "nagios_install.sh"
+  name                   = "mon_install.sh"
   storage_account_name   = azurerm_storage_account.st_pop_001.name
   storage_container_name = azurerm_storage_container.ct_py_001.name
   type                   = "Block"
-  source                 = "nagios_install.sh"
+  source                 = "mon_install.sh"
 }
 

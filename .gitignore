@@ -40,3 +40,5 @@ override.tf.json
 *.sh
 
 linuxkey.pem
+
+ssh.tf

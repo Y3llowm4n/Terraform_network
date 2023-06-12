@@ -46,8 +46,8 @@ resource "azurerm_virtual_machine_extension" "vm_ext_bash2" {
 
   settings = <<SETTINGS
   {
-    "fileUris": ["https://stpy001.blob.core.windows.net/cr-py-prod-001/nagios_install.sh"], 
-    "commandToExecute": "bash nagios_install.sh" 
+    "fileUris": ["https://stpy001.blob.core.windows.net/cr-py-prod-001/mon_install.sh"], 
+    "commandToExecute": "bash mon_install.sh" 
   }
     SETTINGS
 }
