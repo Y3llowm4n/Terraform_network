@@ -35,6 +35,7 @@ resource "azurerm_network_interface" "nic_mon_001" {
     subnet_id                     = azurerm_subnet.snet_mon_westeu_001.id
     private_ip_address_allocation = "Static"
     private_ip_address            = "10.10.2.10"
+    public_ip_address_id          = azurerm_public_ip.pip_mon_prod_westeu_001.id
   }
 
   tags = {

@@ -35,11 +35,5 @@ resource "azurerm_storage_blob" "bb_py_001" {
   source                 = "website2.sh"
 }
 
-resource "azurerm_storage_blob" "bb_mon_001" {
-  name                   = "mon_install.sh"
-  storage_account_name   = azurerm_storage_account.st_pop_001.name
-  storage_container_name = azurerm_storage_container.ct_py_001.name
-  type                   = "Block"
-  source                 = "mon_install.sh"
-}
+
 

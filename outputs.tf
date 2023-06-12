@@ -9,11 +9,11 @@ output "primary_blob_endpoint" {
 output "blob_url" {
   value = azurerm_storage_blob.bb_py_001.url
 }
-output "blob_url_mon" {
-  value = azurerm_storage_blob.bb_mon_001.url
-}
 
 output "public_ip_address" {
   value = azurerm_linux_virtual_machine.vm_py_001.public_ip_address
 }
 
+output "public_ip_address2" {
+  value = azurerm_linux_virtual_machine.vm_mon_001.public_ip_address
+}
